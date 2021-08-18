@@ -1,12 +1,12 @@
-import sys
 from datetime import datetime
+from sys import argv
 import requests
 
 now = datetime.now()
 mon_day_year = '%m/%d/%Y'
 today = now.strftime(mon_day_year)
-uri = str(sys.argv[1])
-param_validate = len(sys.argv) # check if param passed to script
+uri = str(argv[1])
+param_validate = len(argv) # check if param passed to script
 
 def check_last_modified(uri):
     try:
